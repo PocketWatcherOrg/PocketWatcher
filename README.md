@@ -67,6 +67,6 @@ The app will allow the user to input a weekly and monthly balance that they woul
 
 ### [BONUS] Interactive Prototype
 
-## Gif Recordings
+# Gif Recordings
 ## Unit 8 Recording
 <img src="pocketwatcher_unit8.gif" width=600>
