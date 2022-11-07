@@ -79,3 +79,9 @@ Completed User Stories:
 
 Completed User Stories:
 - [x] Transaction screen layout
+
+## Unit 10 Recording
+<img src="pocketwatcher_unit10.gif" width=600>
+
+Completed User Stories:
+- [x] Bottom navigation layout
