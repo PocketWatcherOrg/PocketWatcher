@@ -70,3 +70,12 @@ The app will allow the user to input a weekly and monthly balance that they woul
 # Gif Recordings
 ## Unit 8 Recording
 <img src="pocketwatcher_unit8.gif" width=600>
+
+Completed User Stories:
+- [x] Overview screen layout
+
+## Unit 9 Recording
+<img src="pocketwatcher_unit9.gif" width=600>
+
+Completed User Stories:
+- [x] Transaction screen layout
