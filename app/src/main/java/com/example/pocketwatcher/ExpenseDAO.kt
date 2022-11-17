@@ -16,9 +16,6 @@ interface ExpenseDAO {
     @Insert
     fun insert(expense: ExpenseEntity)
 
-    @Query ("DELETE FROM expense_table")
-    fun delete(expense: ExpenseEntity)
-
     @Query("DELETE FROM expense_table")
     fun deleteAll()
 }
