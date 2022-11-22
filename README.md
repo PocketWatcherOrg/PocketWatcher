@@ -86,9 +86,15 @@ Completed User Stories:
 Completed User Stories:
 - [x] Bottom navigation layout
 
-
 ## Unit 11 Recording
 <img src="pocketwatcher_unit11.gif" width=300>
 
 Completed User Stories:
 - [x] Implement code for bottom navigation
+
+## Unit 12 Recording
+<img src="pocketwatcher_unit12.gif" width=300>
+
+Completed User Stories:
+- [x] Implement the code for the transaction screen
+- [x] Creating database for both screens
