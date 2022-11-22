@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.findFragment
 import androidx.lifecycle.Observer
@@ -46,10 +47,13 @@ class TransactionsFragment : Fragment() {
         val goalprice = view.findViewById<TextView>(R.id.balanceamount)
         val preferences:SharedPreferences = requireActivity().getSharedPreferences("Pref", Context.MODE_PRIVATE)
         goalprice.text = "$" + preferences.getInt("balance", -1).toString()
-    }
-    companion object {
-        fun newInstance(): TransactionsFragment {
-            return TransactionsFragment()
+        val editgoalprice = view.findViewById<EditText>(R.id.editTextTextPersonName)
+        editgoalprice.setOnFocusChangeListener { _, hasfocus ->
+            if (!hasfocus) {
+                goalprice.text = "$" + editgoalprice.text.toString().toInt()
+                preferences.edit().putInt("balance", editgoalprice.text.toString().toInt()).apply()
+            }
         }
     }
 }
+//the goal is stored in the shared preferences under the key balance
