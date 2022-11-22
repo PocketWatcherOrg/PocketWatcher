@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PocketWatcher.iml" filepath="$PROJECT_DIR$/.idea/PocketWatcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PocketWatcher.iml" filepath="$PROJECT_DIR$/.idea/modules/PocketWatcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PocketWatcher.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PocketWatcher.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PocketWatcher.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PocketWatcher.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PocketWatcher.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PocketWatcher.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PocketWatcher.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PocketWatcher.app.unitTest.iml" />
     </modules>
   </component>
 </project>
