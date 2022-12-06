@@ -1,17 +1,13 @@
 package com.example.pocketwatcher
 
-import android.app.Activity
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
 import android.os.Bundle
-import android.view.View
+import android.preference.PreferenceManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.coroutines.launch
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var BottomNav: BottomNavigationView

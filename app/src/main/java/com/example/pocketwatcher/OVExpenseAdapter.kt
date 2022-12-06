@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 
 class OVExpenseAdapter(private val listofexpenses:List<ExpenseEntity>):RecyclerView.Adapter<OVExpenseAdapter.ViewHolder>() {
@@ -22,11 +23,11 @@ class OVExpenseAdapter(private val listofexpenses:List<ExpenseEntity>):RecyclerV
         return ViewHolder(view)
     }
 
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val expense = listofexpenses[position]
         holder.expensename.setText(expense.name)
         holder.expenseprice.setText(expense.price.toString())
+
         if (expense.paid == true){
             holder.button.setBackgroundColor(Color.GREEN)
             holder.button.text = "PAYED"

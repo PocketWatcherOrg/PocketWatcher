@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.fragment.app.findFragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -31,12 +33,13 @@ class OverviewFragment : Fragment() {
             recyclerView.adapter = OVExpenseAdapter(it)
         })
         val goalprice = view.findViewById<TextView>(R.id.goalabalanceov)
+        val paidbalance = view.findViewById<TextView>(R.id.cpb)
+        val balanceaway = view.findViewById<TextView>(R.id.balanceaway)
         val preferences: SharedPreferences = requireActivity().getSharedPreferences("Pref", Context.MODE_PRIVATE)
         val editor = preferences.edit()
         goalprice.text = preferences.getInt("balance",0).toString()
-        val paid_balance = preferences.getInt("pb",0).toString()
-        var balanceaway = preferences.getInt("balance",0).toString().toInt() - paid_balance.toInt()
-
+        paidbalance.text = preferences.getInt("pb",0).toString()
+        balanceaway.text = (preferences.getInt("balance",0) - preferences.getInt("pb",0)).toString()
 
 
     }
