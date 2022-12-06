@@ -8,6 +8,7 @@ import androidx.room.PrimaryKey
 data class ExpenseEntity(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     @ColumnInfo(name = "name") val name: String,
-    @ColumnInfo(name = "price") val price: Int
+    @ColumnInfo(name = "price") val price: Int,
+    @ColumnInfo(name = "paid") var paid: Boolean
 )
 

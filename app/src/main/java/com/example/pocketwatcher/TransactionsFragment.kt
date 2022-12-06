@@ -40,20 +40,16 @@ class TransactionsFragment : Fragment() {
         })
         val namefield = view.findViewById<TextView>(R.id.editTextTextPersonName3)
         val pricefield = view.findViewById<TextView>(R.id.editTextTextPersonName4)
-        view.findViewById<Button>(R.id.button).setOnClickListener(View.OnClickListener {
-            val expense = ExpenseEntity(name = namefield.text.toString(), price = pricefield.text.toString().toInt())
-            GlobalScope.launch(Dispatchers.IO){viewModel.addexpense(expense)}
-        })
         val goalprice = view.findViewById<TextView>(R.id.balanceamount)
         val preferences:SharedPreferences = requireActivity().getSharedPreferences("Pref", Context.MODE_PRIVATE)
-        goalprice.text = "$" + preferences.getInt("balance", -1).toString()
-        val editgoalprice = view.findViewById<EditText>(R.id.editTextTextPersonName)
-        editgoalprice.setOnFocusChangeListener { _, hasfocus ->
-            if (!hasfocus) {
-                goalprice.text = "$" + editgoalprice.text.toString().toInt()
-                preferences.edit().putInt("balance", editgoalprice.text.toString().toInt()).apply()
-            }
-        }
+        val editor = preferences.edit()
+        goalprice.text = preferences.getInt("balance",0).toString()
+        view.findViewById<Button>(R.id.button).setOnClickListener(View.OnClickListener {
+            val expense = ExpenseEntity(name = namefield.text.toString(), price = pricefield.text.toString().toInt(), paid = false)
+            GlobalScope.launch(Dispatchers.IO){viewModel.addexpense(expense)}
+            var balance = preferences.getInt("balance",0) + pricefield.text.toString().toInt()
+            editor.putInt("balance",balance).apply()
+            goalprice.text = balance.toString()
+        })
     }
 }
-//the goal is stored in the shared preferences under the key balance

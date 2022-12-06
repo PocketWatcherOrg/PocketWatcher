@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:text="Light Bill"
         android:textSize="24sp"
+        android:layout_marginTop="7dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -17,10 +18,31 @@
         android:id="@+id/expenseprice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$60"
+        android:layout_marginTop="7dp"
+        android:text="60"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/dollarsign"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/dollarsign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:text="$"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@id/expensename"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/payedbutton"
+        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:text="Payed?"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/expenseprice"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
 
